@@ -1,0 +1,145 @@
+/* da essentiales */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --paper: #FBF1E6;
+    --ink: #2A211B;
+    --sub: #7C6E60;
+    --coral: #E0673F;
+    --coral-deep: #C7502B;
+    --marigold: #E8A93F;
+    --sage: #6FA383;
+    --line: #E2D4C2;
+    --cream: #FFFCF7;
+    --disp: "Bricolage Grotesque", system-ui, sans-serif;
+    --body: "Hanken Grotesk", system-ui, sans-serif;
+    --mono: "Space Mono", ui-monospace, monospace;
+    --accent: #E0673F;
+    --band: #C7502B;
+}
+
+
+/* ticker styling */
+.ticker {
+    background: var(--ink);
+    color: var(--paper);
+    overflow: hidden;
+    border-bottom: 2px solid var(--ink);
+}
+.ticker .run {
+    display: inline-flex;
+    gap: 40px;
+    white-space: nowrap;
+    padding: 9px 0;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    animation: marg 28s linear infinite;
+}
+.ticker .run span {
+    display: inline-flex;
+    gap: 40px;
+}
+.ticker .run b {
+    color: var(--marigold);
+    font-weight: 700;
+}
+
+@keyframes marq {
+    from {transform: translateX(0);}
+    to {transform: translateX(50%);}
+}
+
+/* gotta make it accessible */
+@media (prefers-reduced-motion: reduce) {
+    .ticker .run {
+        animation: none;
+    }
+}
+
+
+/* header */
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+    border-bottom: 2px solid var(--ink);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--disp);
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -.02em;
+}
+
+.mark {
+    width: 30px;
+    height: 30px;
+    background: var(--coral);
+    border: 2px solid var(--ink);
+    border-radius: 50% 50% 50% 4px;
+    transform: rotate(-6deg);
+    flex: 0 0 auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav a {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--ink);
+    position: relative;
+}
+.nav a:hover {
+    color: var(--coral-deep);
+}
+.nav a.has-dot::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: -9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--coral);
+}
+
+@media (max-width: 760px) {
+    .nav .hide-sm {
+        display: none;
+    }
+}
+
+
+/* buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-family: var(--disp);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 14px 24px;
+    border: 2px solid var(--ink);
+    background: var(--coral);
+    color: var(--cream);
+    box-shadow: 4px 4px 0 var(--ink);
+    cursor: pointer;
+    transition: transform .12s, box-shadow .12s;
+    border-radius: 3px;
+}
+.btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
+}
