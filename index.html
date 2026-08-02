@@ -5,6 +5,8 @@
         <meta name="viewport" content="width = device-width, initial-scale=1"/>
         <title>NextGen LIFE - Home</title>
         <link rel="stylesheet" href="life.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;800&display=swap" rel="stylesheet" />
     </head>
 
     <body>
@@ -18,7 +20,8 @@
 
         <!--header-->
         <header class="wrap head">
-            <a class="brand" href="index.html"><span class="mark"></span>Teen Lifestyle Medicine</a>
+            <a class="brand" href="index.html"><img class="logo-img" src="#" alt="NextGen LIFE logo" /></a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')!=='true'); this.nextElementSibling.classList.toggle('open')"><span></span><span></span><span></span></button>
             <nav class="nav">
                 <a class="hide-sm" href="about.html">About</a>
                 <a class="hide-sm" href="programs.html">Programs</a>
@@ -109,8 +112,8 @@
                     <div style="font-family:var(--mono);font-size:13px;letter-spacing:.04em;line-height:1.5;margin-top:6px;opacity:.92;">of chronic disease is rooted in lifestyle</div>
                 </div>
                 <div style="border-left:2px solid rgba(255,252,247,.4);padding-left:30px;">
-                    <div class="display" style="font-size:clamp(56px,7vw,92px);">25+</div>
-                    <div style="font-family:var(--mono);font-size:13px;letter-spacing:.04em;line-height:1.5;margin-top:6px;opacity:.92;">school clubs &amp; counting</div>
+                    <div class="display" style="font-size:clamp(56px,7vw,92px);">2</div>
+                    <div style="font-family:var(--mono);font-size:13px;letter-spacing:.04em;line-height:1.5;margin-top:6px;opacity:.92;">school clubs & counting</div>
                 </div>
             </div>
         </section>
@@ -129,7 +132,7 @@
                         <input class="field" type="email" name="email" placeholder="you@school.edu" aria-label="Email address" required style="flex:1;min-width:200px;" />
                         <button class="btn" type="submit">Subscribe →</button>
                     </form>
-                    <div style="margin-top:16px;"><a href="TLM Media.html" style="font-family:var(--mono);font-size:13px;color:var(--coral-deep);border-bottom:2px solid var(--marigold);padding-bottom:2px;">See the latest issue &amp; what you'll get →</a></div>
+                    <div style="margin-top:16px;"><a href="TLM Media.html" style="font-family:var(--mono);font-size:13px;color:var(--coral-deep);border-bottom:2px solid var(--marigold);padding-bottom:2px;">See the latest issue & what you'll get →</a></div>
                 </div>
                 <div class="photo plain" style="height:200px;transform:rotate(2deg);background:#fff;background-image:none;border-style:solid;color:#bdae9f;">newsletter preview</div>
             </div>
@@ -152,7 +155,7 @@
             <div class="wrap" style="padding:48px 56px 30px;">
                 <div class="foot-word" style="font-size:clamp(40px,7vw,84px);">Be the change.</div>
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-top:28px;padding-top:22px;border-top:2px solid var(--line);flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--sub);">
-                    <span>© 2026 Teen Lifestyle Medicine</span>
+                    <span>© 2026 NextGen LIFE</span>
                     <span style="display:flex;gap:20px;">
                         <a href="media.html">Media</a>
                         <a href="#">Instagram</a>
